@@ -2,7 +2,8 @@ package main;
 
 import java.util.Arrays;
 
-import searching.FirstAndLastPositionInSortedArray;
+import tree.RightSideViewBinaryTree;
+import tree.TreeNode;
 
 public class CodingInterviewMainClass {
 
@@ -62,9 +63,29 @@ public class CodingInterviewMainClass {
 //		System.out.println(sorting.findKthLargestQuickSelect(arrayNums, 3));
 
 		// FirstAndLastPositionInSortedArray
-		int[] arrayNums = new int[] { 1, 5, 5, 5, 6, 7 };
-		FirstAndLastPositionInSortedArray sortedArray = new FirstAndLastPositionInSortedArray();
-		System.out.println(Arrays.toString(sortedArray.searchRangeOptimal(arrayNums, 7)));
+//		int[] arrayNums = new int[] { 1, 5, 5, 5, 6, 7 };
+//		FirstAndLastPositionInSortedArray sortedArray = new FirstAndLastPositionInSortedArray();
+//		System.out.println(Arrays.toString(sortedArray.searchRangeOptimal(arrayNums, 7)));
+
+
+		TreeNode root = new TreeNode(3);
+		TreeNode root1 = new TreeNode(9);
+		TreeNode root2 = new TreeNode(20);
+		TreeNode root3 = new TreeNode(5);
+		TreeNode root4 = new TreeNode(4);
+		root.left = root1;
+		root.right = root2;
+		root1.right = root3;
+		root2.right = root4;
+
+		// Level order binary tree
+//		LevelOrderTreeTraversal traversal = new LevelOrderTreeTraversal();
+//		Object[] resultArray = traversal.levelOrder(root).toArray();
+//		System.out.println(Arrays.toString(resultArray));
+
+		// Right side view of Binary tree
+		RightSideViewBinaryTree binaryTree = new RightSideViewBinaryTree();
+		System.out.println(Arrays.toString((binaryTree.rightSideViewDFS(root)).toArray()));
 
 	}
 
